@@ -15,6 +15,7 @@
 
 Aby uruchomić ten projekt, wpisz:
 ```bash
+  cd frontend
   npm run dev
 ```
 
