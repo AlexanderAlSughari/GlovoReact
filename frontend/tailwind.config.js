@@ -18,6 +18,11 @@ export default {
       dropShadow: {
         '10xl': '0 100px 200px rgba(0, 0, 0, 0.25)',
       },
+      screens: {
+        'laptop': {'max': '1050px'},
+        'tablet': {'max': '900px'},
+        'phone': {'max': '750px'},
+      }
     },
   },
   plugins: [],
