@@ -102,9 +102,9 @@ const Cart = () => {
               </b>
             </div>
           </div>
-          <div className='flex justify-between'>
+          <div className='flex justify-between phone:flex-col phone:items-center'>
             <button onClick={() => navigate('/order')} className='border-none text-white bg-[#9ACD32] w-[max(15vw,200px)] p-[12px_0px] rounded-[4px] cursor-pointer'>PRZEJDŹ DO KASY</button>
-            <button onClick={() => navigate('/')} className='text-[#9ACD32] border border-solid border-[#9ACD32] bg-white w-[max(15vw,200px)] p-[12px_0px] rounded-[4px] cursor-pointer'>WRÓĆ</button>
+            <button onClick={() => navigate('/')} className='text-[#9ACD32] border border-solid border-[#9ACD32] bg-white w-[max(15vw,200px)] p-[12px_0px] rounded-[4px] cursor-pointer phone:mt-[30px]'>WRÓĆ</button>
           </div>
         </div>
         <div className="flex-[1] phone:justify-start">

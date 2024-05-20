@@ -1,8 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
-import { Link } from 'react-router-dom'
 
-const Footer = () => {
+const Footer = ({setShowPopup}) => {
   return (
     <div className='relative bottom-0'>
         <div className='text-[#d9d9d9] bg-[#323232] flex flex-col items-center gap-[20px] p-[20px_8vw] pt-20 mt-[100px]' id='footer'>
@@ -28,7 +27,7 @@ const Footer = () => {
                         <li className='list-none mb-[10px] cursor-pointer'>Strona główna</li>
                         <li className='list-none mb-[10px] cursor-pointer'>O nas</li>
                         <li className='list-none mb-[10px] cursor-pointer'>Dostawy</li>
-                        <li onClick={() => setShowLogin(true)}  className='list-none mb-[10px] cursor-pointer'>Polityka prywatności</li>
+                        <li className='list-none mb-[10px] cursor-pointer'><button onClick={() => setShowPopup(true)}  >Polityka prywatności</button></li>
                     </ul>
                 </div>
                 <div className="flex flex-col items-start gap-5">

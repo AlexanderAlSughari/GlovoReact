@@ -9,7 +9,7 @@ const PlaceOrder = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='flex items-start justify-between gap-[50px] mt-[100px]'>
+    <div className='flex items-start justify-between gap-[50px] mt-[100px] phone:flex-col'>
       <div className='w-full max-w-[max(30%,500px)]'>
         <p className='text-[30px] font-semibold mb-[50px]'>Informacje o dostawie</p>
         <div className="flex gap-[10px]">
@@ -47,7 +47,7 @@ const PlaceOrder = () => {
               <b>{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()+6} zł</b>
             </div>
           </div>
-          <div className='flex justify-between'>
+          <div className='flex justify-between phone:flex-col-reverse phone:items-center'>
             <button className='border-none text-white bg-[#9ACD32] w-[max(15vw,200px)] p-[12px_0px] rounded-[4px] cursor-pointer mt-[30px]'>PRZEJDŹ DO ZAPŁATY</button>
             <button onClick={() => navigate('/cart')} className='text-[#9ACD32] border border-solid border-[#9ACD32] bg-white w-[max(15vw,200px)] p-[12px_0px] rounded-[4px] cursor-pointer mt-[30px]'>WRÓĆ</button>
           </div>

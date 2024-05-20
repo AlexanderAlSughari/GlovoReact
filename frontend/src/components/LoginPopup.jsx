@@ -7,7 +7,7 @@ const LoginPopup = ({setShowLogin}) => {
 
   return (
     <div className='absolute z-[1] w-full h-full bg-[#00000090] grid'>
-        <form className='place-self-center w-[max(23vw,330px)] tet-[#808080] bg-white flex flex-col gap-[25px] p-[25px_30px] rounded-lg text-sm animate-fadeIn duration-500'>
+        <form className='place-self-center w-[max(23vw,330px)] text-[#808080] bg-white flex flex-col gap-[25px] p-[25px_30px] rounded-lg text-sm animate-fadeIn duration-500'>
             <div className="flex justify-between items-center text-black">
                 <h2 className='font-medium text-2xl'>{currState === "Sign up" ? "Zarejestruj się" : "Zaloguj się"}</h2>
                 <img className='cursor-pointer' onClick={() => setShowLogin(false)} src={assets.cross_icon} alt="cross_icon" />
