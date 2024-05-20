@@ -90,7 +90,7 @@ export const menu_list = [
         menu_image: menu_1
     },
     {
-        menu_name: "Rolady",
+        menu_name: "Pizze",
         menu_image: menu_2
     },
     {
@@ -154,28 +154,28 @@ export const food_list = [
         image: food_5,
         price: 28,
         description: "Pizza Margherita to klasyczna włoska uczta, która łączy w sobie delikatne ciasto, aromatyczny sos pomidorowy i rozpływający się w ustach ser mozzarella. ",
-        category: "Rolady"
+        category: "Pizze"
     }, {
         _id: "6",
         name: "Pizza z Salami",
         image: food_6,
         price: 45,
         description: "Pizza z salami to doskonałe połączenie chrupiącego, cienkiego ciasta, soczystego sosu pomidorowego i aromatycznego, pikantnego salami. Każdy kęs to wyjątkowa kompozycja smaków.",
-        category: "Rolady"
+        category: "Pizze"
     }, {
         _id: "7",
         name: "Pizza Hawajska",
         image: food_7,
         price: 30,
         description: "Pizza hawajska to wyjątkowe połączenie soczystego ananasa i delikatnej szynki na chrupiącym, złocistym cieście. Zanurz się w egzotycznym smaku, który przeniesie Cię prosto na tropikalne wyspy z każdym kęsem.",
-        category: "Rolady"
+        category: "Pizze"
     }, {
         _id: "8",
         name: "Pizza z Kurczakiem",
         image: food_8,
         price: 35,
         description: "Pizza z kurczakiem to połączenie soczystego kurczaka, świeżych warzyw i aromatycznego sera, stworzonego dla miłośników intensywnych smaków. Każdy kawałek to harmonijne połączenie, które rozpływa się w ustach.",
-        category: "Rolady"
+        category: "Pizze"
     }, {
         _id: "9",
         name: "Lody Malinowe",
