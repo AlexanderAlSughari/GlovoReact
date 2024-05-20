@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { StoreContext } from '../context/StoreContext'
 import { useNavigate } from 'react-router-dom';
 import { assets } from '../assets/assets';
@@ -8,6 +8,31 @@ const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
 
   const navigate = useNavigate();
+
+  let price = 0;
+
+  const promocodes = [
+    {
+      _id: 1,
+      promocode: "kocham-php",
+      promovalue: 15,
+    },
+    {
+      _id: 2,
+      promocode: "kocham-reacta",
+      promovalue: 20,
+    },
+    {
+      _id: 3,
+      promocode: "kocham-androida",
+      promovalue: 50,
+    }
+  ];
+
+  const [code, setCode] = useState("kod");
+  const [discount, setDiscount] = useState(false);
+  const [isDisabled, setDisabled] = useState(false);
+  const [afterPromoPrice, setAfterPromoPrice] = useState(0);
 
   return (
     <div className='mt-[100px]'>
@@ -26,7 +51,7 @@ const Cart = () => {
           if(cartItems[item._id] > 0)
             {
               return (
-                <div>
+                <div key={{index}}>
                   <div className='grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] items-center text-[max(1vw,12px)] m-[10px_0px] text-black'>
                     <img className='w-[50px] select-none' src={item.image} alt="item_image" />
                     <p>{item.name}</p>
@@ -47,7 +72,16 @@ const Cart = () => {
           <div>
             <div className='flex justify-between text-[#555]'>
               <p>Podsumowanie</p>
-              <p>{getTotalCartAmount()} zł</p>
+              <p>
+                {discount === true
+                ? <span>
+                    <span className='line-through'>({getTotalCartAmount()}zł)</span>
+                    <span> {afterPromoPrice}</span>
+                  </span>
+                : getTotalCartAmount()
+                }
+                {console.log(getTotalCartAmount(), afterPromoPrice)}
+                 zł</p>
             </div>
             <hr className='m-[10px_0px]' />
             <div className='flex justify-between text-[#555]'>
@@ -57,7 +91,15 @@ const Cart = () => {
             <hr className='m-[10px_0px]' />
             <div className='flex justify-between text-[#555]'>
               <b>Razem</b>
-              <b>{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()+6} zł</b>
+              <b>
+                {getTotalCartAmount() === 0
+                 ? 0
+                 : (discount === true
+                    ? afterPromoPrice+6
+                    : getTotalCartAmount()+6
+                  )
+                } zł
+              </b>
             </div>
           </div>
           <div className='flex justify-between'>
@@ -69,9 +111,13 @@ const Cart = () => {
           <div>
             <p className='text-[#555]'>Jeśli masz kod promocyjny, wprowadź go tutaj</p>
             <div className='mt-[10px] flex justify-between items-center bg-[#eaeaea] rounded-[4px]'>
-              <input className='bg-transparent border-none outline-none pl-[10px]' type="text" placeholder='kod promocyjny' />
-              <button className='w-[max(10vw,150px)] p-[12px_5px] bg-black border-none text-white rounded-[4px]'>Zatwierdź</button>
+              <input onChange={() => setCode(document.getElementById('promocode').value)} className='bg-transparent border-none outline-none pl-[10px]' type="text" placeholder='kod promocyjny' id='promocode' disabled={isDisabled}/>
+              <button onClick={() => ((promocodes.some((obj) => obj.promocode.includes(code))) ? (setDisabled(true), setDiscount(true), setAfterPromoPrice(getTotalCartAmount() - parseFloat((getTotalCartAmount() * (promocodes.find((obj) => obj.promocode === code).promovalue/100)).toFixed(2)))) : "")} className='w-[max(10vw,150px)] p-[12px_5px] bg-black border-none text-white rounded-[4px]' disabled={isDisabled}>Zatwierdź</button>
             </div>
+            {discount === true
+             ? <p className='text-[red]'>Twoja zniżka {promocodes.find((obj) => obj.promocode === code).promovalue}% została aktywowana!</p>
+             : ""
+            }
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="w-full grid grid-cols-[2fr_1fr_1fr] gap-20 phone:flex phone:flex-col phone:gap-[35px]">
                 <div className="flex flex-col items-start gap-5">
                     <img className='w-[200px]' src={assets.logo} alt="logo" />
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+                    <p>GlovoApp to rewolucyjna platforma, która przynosi wyjątkową wygodę zamawiania jedzenia prosto pod drzwi. Z szerokim wyborem menu, dostarczamy świeże, smakowite dania do Twojego domu w tempie błyskawicznym. Nasza intuicyjna strona pozwala łatwo przeglądać i zamawiać swoje zamówienia, zapewniając niezrównane doświadczenie użytkownika. Dołącz do milionów zadowolonych klientów i odkryj, dlaczego GlovoApp to najlepsze rozwiązanie dla Twojego głodu! Nie czekaj dłużej - zamów już teraz i delektuj się ulubionymi smakami bez wychodzenia z domu!</p>
                     <div className='flex flex-row'>
                         <a href="https://www.facebook.com" target='_blank'>
                             <img className='w-10 mr-[15px]' src={assets.facebook_icon} alt="facebook_icon" />

@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { StoreContext } from '../context/StoreContext'
 import { useNavigate } from 'react-router-dom';
 
-const PlaceOrder = ({}) => {
+const PlaceOrder = () => {
 
   const {getTotalCartAmount} = useContext(StoreContext);
 

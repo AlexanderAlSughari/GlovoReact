@@ -19,7 +19,7 @@ const FoodItem = ({id, name, price, description, image}) => {
               </div>
         }
       </div>
-      <div className="p-5" >
+      <div className="p-5 min-h-[250px] flex flex-col justify-evenly " >
         <div className='flex justify-between mb-[10px]'>
             <p className='text-[20px] font-medium'>{name}</p>
             <img className='w-[70px] object-contain select-none' src={assets.rating_stars} alt="rating_stars" />

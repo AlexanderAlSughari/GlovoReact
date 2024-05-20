@@ -121,232 +121,233 @@ export const menu_list = [
 export const food_list = [
     {
         _id: "1",
-        name: "Greek salad",
+        name: "Sałatka Grecka",
         image: food_1,
         price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Sałatka grecka to świeże połączenie chrupiących warzyw, aromatycznych oliwek i kremowego sera feta.Każdy kęs to podróż do słonecznej Grecji, pełna smaków i witalności.",
         category: "Sałatki"
     },
     {
         _id: "2",
-        name: "Veg salad",
+        name: "Sałatka Warzywna",
         image: food_2,
         price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Sałatka warzywna to kolorowa mieszanka świeżych, chrupiących warzyw, wzbogacona delikatnym sosem, który podkreśla ich naturalny smak. Idealna propozycja dla tych, którzy cenią sobie zdrowe, lekkie i pełne witamin posiłki.",
         category: "Sałatki"
     }, {
         _id: "3",
-        name: "Clover Salad",
+        name: "Sałatka z koniczyną",
         image: food_3,
         price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Sałatka z koniczyną to wyjątkowe połączenie delikatnych liści koniczyny, soczystych warzyw i chrupiących orzechów, które tworzy harmonijną kompozycję smaków i tekstur.",
         category: "Sałatki"
     }, {
         _id: "4",
-        name: "Chicken Salad",
+        name: "Sałatka z kurczakiem",
         image: food_4,
         price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasza sałatka z kurczakiem to połączenie soczystych kawałków grillowanego kurczaka, świeżych warzyw i chrupiących grzanek, wszystko skropione aromatyczną oliwą. To pełnowartościowy posiłek, który zadowoli każdego oferując zdrowie i smak w jednym.",
         category: "Sałatki"
     }, {
         _id: "5",
-        name: "Lasagna Rolls",
+        name: "Pizza Margherita",
         image: food_5,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 28,
+        description: "Pizza Margherita to klasyczna włoska uczta, która łączy w sobie delikatne ciasto, aromatyczny sos pomidorowy i rozpływający się w ustach ser mozzarella. ",
         category: "Rolady"
     }, {
         _id: "6",
-        name: "Peri Peri Rolls",
+        name: "Pizza z Salami",
         image: food_6,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 45,
+        description: "Pizza z salami to doskonałe połączenie chrupiącego, cienkiego ciasta, soczystego sosu pomidorowego i aromatycznego, pikantnego salami. Każdy kęs to wyjątkowa kompozycja smaków.",
         category: "Rolady"
     }, {
         _id: "7",
-        name: "Chicken Rolls",
+        name: "Pizza Hawajska",
         image: food_7,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 30,
+        description: "Pizza hawajska to wyjątkowe połączenie soczystego ananasa i delikatnej szynki na chrupiącym, złocistym cieście. Zanurz się w egzotycznym smaku, który przeniesie Cię prosto na tropikalne wyspy z każdym kęsem.",
         category: "Rolady"
     }, {
         _id: "8",
-        name: "Veg Rolls",
+        name: "Pizza z Kurczakiem",
         image: food_8,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 35,
+        description: "Pizza z kurczakiem to połączenie soczystego kurczaka, świeżych warzyw i aromatycznego sera, stworzonego dla miłośników intensywnych smaków. Każdy kawałek to harmonijne połączenie, które rozpływa się w ustach.",
         category: "Rolady"
     }, {
         _id: "9",
-        name: "Ripple Ice Cream",
+        name: "Lody Malinowe",
         image: food_9,
         price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Lody malinowe to intensywnie owocowy smak zamknięty w kremowej, jedwabistej konsystencji, idealne na gorące letnie dni. Każdy kęs to eksplozja świeżości malin, która rozpływa się na podniebieniu.",
         category: "Desery"
     }, {
         _id: "10",
-        name: "Fruit Ice Cream",
+        name: "Lody Owocowe",
         image: food_10,
         price: 22,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze lody owocowe to doskonałe połączenie świeżych, soczystych owoców i kremowej konsystencji, która rozpływa się w ustach, dając uczucie orzeźwienia.",
         category: "Desery"
     }, {
         _id: "11",
-        name: "Jar Ice Cream",
+        name: "Lody w Słoikczku",
         image: food_11,
         price: 10,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Lody w słoiczku to niezwykłe doznania smakowe zamknięte w eleganckim opakowaniu, które zachwyca nie tylko wyglądem, ale także intensywnością smaku. ",
         category: "Desery"
     }, {
         _id: "12",
-        name: "Vanilla Ice Cream",
+        name: "Lody Waniliowe",
         image: food_12,
         price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Lody waniliowe to klasyczna uczta, których kremowa konsystencja rozpływa się delikatnie w ustach, podkreślając subtelną słodycz prawdziwej wanilii. ",
         category: "Desery"
     },
     {
         _id: "13",
-        name: "Chicken Sandwich",
+        name: "Kanapka z Kurczakiem",
         image: food_13,
         price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze kanapki z soczystym kurczakiem to połączenie chrupiącej świeżej sałaty, kremowego majonezu i aromatycznego mięsa, zapewniające intensywny smak i pełne zaspokojenie.",
         category: "Kanapki"
     },
     {
         _id: "14",
-        name: "Vegan Sandwich",
+        name: "Kanapka Wegańska",
         image: food_14,
         price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Kanapka wegańska to harmonijne połączenie świeżych warzyw, kremowego hummusu i chrupiącego chleba pełnoziarnistego, stworzone z myślą o najwyższej jakości składnikach i wyjątkowym smaku.",
         category: "Kanapki"
     }, {
         _id: "15",
-        name: "Grilled Sandwich",
+        name: "Kanapka Grilowana",
         image: food_15,
         price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasza kanapka grilowana to idealne połączenie chrupiącego pieczywa, soczystego mięsa i roztopionego sera, stworzone do zaspokojenia Twojego głodu w najlepszy możliwy sposób",
         category: "Kanapki"
     }, {
         _id: "16",
-        name: "Bread Sandwich",
+        name: "Kanapka w bagietce",
         image: food_16,
         price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze kanapki w chrupiącej bagietce to połączenie wykwintnych składników, takich jak soczyste kawałki mięsa, świeże warzywa i aromatyczne sosy",
         category: "Kanapki"
     }, {
         _id: "17",
-        name: "Cup Cake",
+        name: "Babeczki",
         image: food_17,
         price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze babeczki są pełne delikatnego ciasta i rozpływającego się w ustach kremu, które sprawią, że każdy dzień stanie się wyjątkowy.",
         category: "Ciasta"
     }, {
         _id: "18",
-        name: "Vegan Cake",
+        name: "Ciasto Wegańskie",
         image: food_18,
         price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "To wegańskie ciasto kusi swoją wyjątkową lekkością i bogactwem smaków, bez użycia produktów pochodzenia zwierzęcego. ",
         category: "Ciasta"
     }, {
         _id: "19",
-        name: "Butterscotch Cake",
+        name: "Ciasto Toffi",
         image: food_19,
         price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Ciasto toffi to słodki raj dla podniebienia, połączenie puszystego ciasta z intensywnym smakiem karmelu, które rozpływa się w ustach.",
         category: "Ciasta"
     }, {
         _id: "20",
-        name: "Sliced Cake",
+        name: "Ciasto z musem owocowym",
         image: food_20,
         price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze ciasto z musem owocowym to prawdziwa uczta dla zmysłów, łącząca lekkość puszystego ciasta z intensywnie owocowym, orzeźwiającym musem. Każdy kawałek to idealna harmonia słodyczy i świeżości, która rozpływa się w ustach, przynosząc chwilę czystej przyjemności!",
         category: "Ciasta"
     }, {
         _id: "21",
-        name: "Garlic Mushroom ",
+        name: "Duszone pieczarki",
         image: food_21,
         price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze duszone pieczarki to wyjątkowa uczta dla miłośników głębokich, ziemistych smaków, gdzie każdy kawałek rozpływa się w ustach. Starannie doprawione i duszone do perfekcji, pieczarki zachowują swoją soczystość i aromat, tworząc doskonały dodatek do wielu potraw!",
         category: "Wegańskie"
     }, {
         _id: "22",
-        name: "Fried Cauliflower",
+        name: "Smażony kalafior",
         image: food_22,
         price: 22,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasz smażony kalafior to chrupiąca i złocista przekąska, która zaskoczy Cię swoją delikatnością i wyrazistym smakiem. Każdy kęs to połączenie soczystości kalafiora i aromatycznych przypraw, które sprawiają, że danie staje się niezapomnianą ucztą dla podniebienia!",
         category: "Wegańskie"
     }, {
         _id: "23",
-        name: "Mix Veg Pulao",
+        name: "Ryż Basmati z warzywami",
         image: food_23,
         price: 10,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasz ryż basmati z warzywami to wyjątkowe połączenie aromatycznego, puszystego ryżu i świeżych, kolorowych warzyw, które razem tworzą harmonijną i pełną smaku kompozycję. Idealnie dobrane przyprawy podkreślają naturalne walory składników, oferując danie, które jest nie tylko zdrowe, ale i niezwykle apetyczne!",
         category: "Wegańskie"
     }, {
         _id: "24",
-        name: "Rice Zucchini",
+        name: "Cukinia Ryżowa",
         image: food_24,
         price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasza cukinia ryżowa to innowacyjna i zdrowa alternatywa dla tradycyjnego ryżu, która jest pełna witamin i niskokaloryczna, idealna dla dbających o linię. Delikatne, lekko chrupiące kawałki cukinii doskonale wchłaniają smaki ulubionych przypraw i sosów, tworząc niezwykle apetyczne danie!",
         category: "Wegańskie"
     },
     {
         _id: "25",
-        name: "Cheese Pasta",
+        name: "Makaron serowy",
         image: food_25,
         price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasz makaron serowy to prawdziwa gratka dla miłośników intensywnych, kremowych smaków, gdzie każda porcja obfituje w rozpływający się w ustach serowy sos. Idealnie ugotowany makaron doskonale komponuje się z wyrazistym smakiem różnych serów, tworząc harmonijną całość.",
         category: "Makarony"
     },
     {
         _id: "26",
-        name: "Tomato Pasta",
+        name: "Makaron w sosie pomidorowym",
         image: food_26,
         price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasz makaron w sosie pomidorowym to kwintesencja włoskiej kuchni, gdzie każda porcja łączy w sobie soczystość dojrzałych pomidorów i aromatyczne przyprawy, tworząc niepowtarzalny smak. Idealnie ugotowany makaron wchłania bogaty sos, oferując prawdziwą ucztę dla podniebienia.",
         category: "Makarony"
     }, {
         _id: "27",
-        name: "Creamy Pasta",
+        name: "Makaron w kremowym sosie",
         image: food_27,
         price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasz makaron w kremowym sosie to wykwintne połączenie aksamitnego sosu i idealnie ugotowanego makaronu, które rozpieszcza podniebienie każdą nutą smaku. Spróbuj go już dziś i zanurz się w kulinarnej rozkoszy, którą z łatwością przygotujesz w swojej kuchni!",
         category: "Makarony"
     }, {
         _id: "28",
-        name: "Chicken Pasta",
+        name: "Makaron z kurczakiem",
         image: food_28,
         price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasz makaron z kurczakiem to sycące danie, w którym soczyste kawałki kurczaka łączą się z doskonale ugotowanym makaronem, tworząc harmonię smaków, która zachwyci każdego. Spróbuj go już dziś i przekonaj się, jak łatwo można wprowadzić do swojego menu pełnowartościowy i pyszny posiłek!",
         category: "Makarony"
     }, {
         _id: "29",
-        name: "Buttter Noodles",
+        name: "Noodle z serem",
         image: food_29,
         price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze Noodle z serem to wyjątkowe połączenie kremowego sosu serowego i idealnie ugotowanych Noodli, które rozpływa się w ustach, zapewniając niezapomniane doznania smakowe. Spróbuj go już dziś i odkryj, jak łatwo można cieszyć się domowym komfortem w każdej porcji!",
         category: "Noodle"
     }, {
         _id: "30",
-        name: "Veg Noodles",
+        name: "Noodle warzywne",
         image: food_30,
         price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze Noodle warzywne to zdrowa i kolorowa alternatywa, pełna witamin i naturalnych smaków, która sprawi, że każde danie będzie nie tylko pyszne, ale i pożywne. Spróbuj go już dziś i ciesz się lekkością oraz świeżością warzyw w każdym kęsie!",
         category: "Noodle"
     }, {
         _id: "31",
-        name: "Somen Noodle",
+        name: "Białe Noodle japoński",
         image: food_31,
         price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze Noodle japońskie to kulinarna podróż do Azji, charakteryzująca się delikatnym, gładkim smakiem, który doskonale komponuje się z różnorodnymi sosami i dodatkami. Wypróbuj go już dziś i odkryj, jak łatwo wprowadzić do swojej kuchni autentyczny japoński akcent!",
         category: "Noodle"
     }, {
         _id: "32",
-        name: "Cooked Noodles",
+        name: "Gotowane Noodle",
         image: food_32,
         price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Nasze gotowany Noodle to doskonała baza dla każdego dania – jest idealnie al dente, z delikatnym, ale sprężystym kęsem, który zachwyci Twoje podniebienie. Spróbuj go już dziś i odkryj, jak łatwo można stworzyć smaczne i sycące posiłki w kilka minut!",
         category: "Noodle"
     }
 ]
+
