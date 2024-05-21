@@ -1,10 +1,48 @@
 import React, { useState } from 'react'
 import { assets } from '../assets/assets';
 
-const LoginPopup = ({setShowLogin}) => {
-
+const LoginPopup = ({ setShowLogin }) => {
     const [currState, setCurrState] = useState("Login");
-
+    const [errors, setErrors] = useState({});
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        password: '',
+    });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+    const validate = () => {
+        const newErrors = {};
+        if (currState === "Sign up" && !formData.name.trim()) {
+            newErrors.name = "Imię jest wymagane";
+        }
+        if (!formData.email.trim()) {
+            newErrors.email = "Email jest wymagany";
+        } 
+        else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = "Email jest nieprawidłowy";
+        }
+        if (!formData.password.trim()) {
+            newErrors.password = "Hasło jest wymagane";
+        } 
+        else if (formData.password.length < 6) {
+            newErrors.password = "Hasło musi mieć co najmniej 6 znaków";
+        }
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (validate()) {
+            // submit the form
+            console.log("Formularz wysłany", formData);
+        }
+    };
   return (
     <div className='absolute z-[1] w-full h-full bg-[#00000090] grid'>
         <form className='place-self-center w-[max(23vw,330px)] text-[#808080] bg-white flex flex-col gap-[25px] p-[25px_30px] rounded-lg text-sm animate-fadeIn duration-500'>
