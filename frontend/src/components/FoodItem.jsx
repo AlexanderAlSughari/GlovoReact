@@ -7,7 +7,7 @@ const FoodItem = ({id, name, price, description, image}) => {
     const {cartItems, addToCart, removeFromCart} = useContext(StoreContext)
 
   return (
-    <div className='w-full m-auto rounded-[15px] shadow-[0px_0px_10px_#00000015] delay-300 animate-fadeIn duration-1000'>
+    <div className='w-full m-auto rounded-[15px] shadow-[0px_0px_10px_#00000015] delay-300 animate-fadeIn duration-1000 dark:bg-[#0c0a09]'>
       <div className='relative'>
         <img className='w-full rounded-[15px_15px_0px_0px] select-none' src={image} alt="food-item-image" />
         {!cartItems[id]
@@ -21,7 +21,7 @@ const FoodItem = ({id, name, price, description, image}) => {
       </div>
       <div className="p-5 min-h-[250px] flex flex-col justify-evenly " >
         <div className='flex justify-between mb-[10px]'>
-            <p className='text-[20px] font-medium'>{name}</p>
+            <p className='text-[20px] font-medium dark:text-[#d4d4d4]'>{name}</p>
             <img className='w-[70px] object-contain select-none' src={assets.rating_stars} alt="rating_stars" />
         </div>
         <p className="text-[#676767] text-xs">{description}</p>
