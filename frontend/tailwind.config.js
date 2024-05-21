@@ -4,7 +4,19 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
+    colors:{
+      black: '#121212',
+      white: '#ffffff'
+    },
+    fill:{
+      current: 'currentColor'
+    },
+
+    fill :theme => ({
+      'white': theme('colors.white')
+    }),
     extend: {
       animation: {
         fadeIn: 'fadeIn 1s ease-out',
