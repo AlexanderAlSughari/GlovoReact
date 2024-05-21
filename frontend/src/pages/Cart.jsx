@@ -35,7 +35,7 @@ const Cart = () => {
   const [afterPromoPrice, setAfterPromoPrice] = useState(0);
 
   return (
-    <div className='mt-[100px]'>
+    <div className='mt-[100px] dark:bg-black'>
       <div className="cart-items">
         <div className="grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] items-center text-[gray] text-[max(1vw,12px)]">
           <p>Produkt</p>
@@ -46,7 +46,7 @@ const Cart = () => {
           <p>Usuń</p>
         </div>
         <br />
-        <hr />
+        <hr className='dark:text-[#313131]' />
         {food_list.map((item, index) => {
           if(cartItems[item._id] > 0)
             {
@@ -68,7 +68,7 @@ const Cart = () => {
       </div>
       <div className="mt-20 flex justify-between gap-[max(12vw,20px)] phone:flex-col-reverse">
         <div className="flex flex-[1] flex-col gap-5">
-          <h2 className='font-bold text-2xl'>Suma</h2>
+          <h2 className='font-bold text-2xl dark:text-white'>Suma</h2>
           <div>
             <div className='flex justify-between text-[#555]'>
               <p>Podsumowanie</p>
@@ -83,12 +83,12 @@ const Cart = () => {
                 {console.log(getTotalCartAmount(), afterPromoPrice)}
                  zł</p>
             </div>
-            <hr className='m-[10px_0px]' />
+            <hr className='m-[10px_0px] dark:text-[#313131]' />
             <div className='flex justify-between text-[#555]'>
               <p>Opłata za dostawę</p>
               <p>{getTotalCartAmount() === 0 ? 0 : 6} zł</p>
             </div>
-            <hr className='m-[10px_0px]' />
+            <hr className='m-[10px_0px] dark:text-[#313131]' />
             <div className='flex justify-between text-[#555]'>
               <b>Razem</b>
               <b>
@@ -104,15 +104,15 @@ const Cart = () => {
           </div>
           <div className='flex justify-between phone:flex-col phone:items-center'>
             <button onClick={() => navigate('/order')} className='border-none text-white bg-[#9ACD32] w-[max(15vw,200px)] p-[12px_0px] rounded-[4px] cursor-pointer'>PRZEJDŹ DO KASY</button>
-            <button onClick={() => navigate('/')} className='text-[#9ACD32] border border-solid border-[#9ACD32] bg-white w-[max(15vw,200px)] p-[12px_0px] rounded-[4px] cursor-pointer phone:mt-[30px]'>WRÓĆ</button>
+            <button onClick={() => navigate('/')} className='text-[#9ACD32] border border-solid border-[#9ACD32] bg-white w-[max(15vw,200px)] p-[12px_0px] rounded-[4px] cursor-pointer phone:mt-[30px] dark:bg-black'>WRÓĆ</button>
           </div>
         </div>
-        <div className="flex-[1] phone:justify-start">
+        <div className="flex-[1] phone:justify-start dark:bg-[313131]">
           <div>
             <p className='text-[#555]'>Jeśli masz kod promocyjny, wprowadź go tutaj</p>
-            <div className='mt-[10px] flex justify-between items-center bg-[#eaeaea] rounded-[4px]'>
-              <input onChange={() => setCode(document.getElementById('promocode').value)} className='bg-transparent border-none outline-none pl-[10px]' type="text" placeholder='kod promocyjny' id='promocode' disabled={isDisabled}/>
-              <button onClick={() => ((promocodes.some((obj) => obj.promocode.includes(code))) ? (setDisabled(true), setDiscount(true), setAfterPromoPrice(getTotalCartAmount() - parseFloat((getTotalCartAmount() * (promocodes.find((obj) => obj.promocode === code).promovalue/100)).toFixed(2)))) : "")} className='w-[max(10vw,150px)] p-[12px_5px] bg-black border-none text-white rounded-[4px]' disabled={isDisabled}>Zatwierdź</button>
+            <div className='mt-[10px] flex justify-between items-center bg-[#eaeaea] rounded-[4px] dark:bg-[313131]'>
+              <input onChange={() => setCode(document.getElementById('promocode').value)} className='bg-transparent border-none outline-none pl-[10px] dark:bg-[313131]' type="text" placeholder='kod promocyjny' id='promocode' disabled={isDisabled}/>
+              <button onClick={() => ((promocodes.some((obj) => obj.promocode.includes(code))) ? (setDisabled(true), setDiscount(true), setAfterPromoPrice(getTotalCartAmount() - parseFloat((getTotalCartAmount() * (promocodes.find((obj) => obj.promocode === code).promovalue/100)).toFixed(2)))) : "")} className='w-[max(10vw,150px)] p-[12px_5px] bg-black border-none text-white rounded-[4px] dark:bg-white dark:text-black' disabled={isDisabled}>Zatwierdź</button>
             </div>
             {discount === true
              ? <p className='text-[red]'>Twoja zniżka {promocodes.find((obj) => obj.promocode === code).promovalue}% została aktywowana!</p>
