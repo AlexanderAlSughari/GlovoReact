@@ -39,7 +39,6 @@ const LoginPopup = ({ setShowLogin }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            // submit the form
             console.log("Formularz wysłany", formData);
         }
     };
