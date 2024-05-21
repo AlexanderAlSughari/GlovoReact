@@ -3,11 +3,60 @@ import { StoreContext } from '../context/StoreContext'
 import { useNavigate } from 'react-router-dom';
 
 const PlaceOrder = () => {
-
-  const {getTotalCartAmount} = useContext(StoreContext);
-
+  const { getTotalCartAmount } = useContext(StoreContext);
   const navigate = useNavigate();
 
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    street: '',
+    city: '',
+    state: '',
+    postalCode: '',
+    country: '',
+    phone: '',
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.firstName.trim()) newErrors.firstName = "Imię jest wymagane";
+    if (!formData.lastName.trim()) newErrors.lastName = "Nazwisko jest wymagane";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email jest wymagany";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email jest nieprawidłowy";
+    }
+    if (!formData.street.trim()) newErrors.street = "Ulica jest wymagana";
+    if (!formData.city.trim()) newErrors.city = "Miasto jest wymagane";
+    if (!formData.state.trim()) newErrors.state = "Województwo jest wymagane";
+    if (!formData.postalCode.trim()) newErrors.postalCode = "Kod pocztowy jest wymagany";
+    if (!formData.country.trim()) newErrors.country = "Kraj jest wymagany";
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Telefon jest wymagany";
+    } 
+    else if (!/^\d{9}$/.test(formData.phone)) {
+      newErrors.phone = "Telefon jest nieprawidłowy";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      console.log("Formularz wysłany", formData);
+    }
+  };
   return (
     <div className='flex items-start justify-between gap-[50px] mt-[100px] phone:flex-col'>
       <div className='w-full max-w-[max(30%,500px)]'>
