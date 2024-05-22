@@ -6,9 +6,11 @@ import { BrowserRouter } from 'react-router-dom'
 import StoreContextProvider from './context/StoreContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <div className='dark:bg-black'>
   <BrowserRouter>
     <StoreContextProvider>
       <App />
     </StoreContextProvider>
   </BrowserRouter>
+  </div>
 )
