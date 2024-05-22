@@ -32,17 +32,17 @@ const PlaceOrder = () => {
         <div className="flex flex-[1] flex-col gap-5">
           <h2 className='font-bold text-2xl dark:text-white'>Suma</h2>
           <div>
-            <div className='flex justify-between text-[#555]'>
+            <div className='flex justify-between text-[#555] dark:text-[#B8B8B8]'>
               <p>Podsumowanie</p>
               <p>{getTotalCartAmount()} zł</p>
             </div>
-            <hr className='m-[10px_0px] dark:text-[#313131]' />
-            <div className='flex justify-between text-[#555]'>
+            <hr className='m-[10px_0px] dark:text-[#B8B8B8]' />
+            <div className='flex justify-between text-[#555] dark:text-[#B8B8B8]'>
               <p>Opłata za dostawę</p>
               <p>{getTotalCartAmount() === 0 ? 0 : 6} zł</p>
             </div>
-            <hr className='m-[10px_0px] dark:text-[#313131]' />
-            <div className='flex justify-between text-[#555]'>
+            <hr className='m-[10px_0px] dark:text-[#B8B8B8]' />
+            <div className='flex justify-between text-[#555] dark:text-[#B8B8B8]'>
               <b>Razem</b>
               <b>{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()+6} zł</b>
             </div>
