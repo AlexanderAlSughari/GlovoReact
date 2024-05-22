@@ -46,7 +46,7 @@ const Navbar = ({setShowLogin}) => {
           <Link to='/cart' state={{ setMenu: menu }}><img className="laptop:w-[22px] tablet:w-[20px]" src={assets.basket_icon} alt="basket_icon" /></Link>
           <div className={getTotalCartAmount() === 0 ? "" : "absolute min-w-[10px] min-h-[10px] bg-[#9ACD32] rounded-[5px] -top-2 -right-2"}></div>
         </div>
-        <button onClick={() => setShowLogin(true)} className='bg-transparent text-base text-[#49557e] border border-solid border-[#9ACD32] py-[10px] px-[30px] rounded-[50px] cursor-pointer hover:bg-[#f2fff4] hover:duration-300 laptop:p-[8px_25px] tablet:p-[7px_20px] tablet:text-[15px] dark:text-[#ffffff]'>Zaloguj się</button>
+        <button onClick={() => setShowLogin(true)} className='bg-transparent text-base text-[#49557e] border border-solid border-[#9ACD32] py-[10px] px-[30px] rounded-[50px] cursor-pointer hover:bg-[#f2fff4] hover:duration-300 laptop:p-[8px_25px] tablet:p-[7px_20px] tablet:text-[15px] dark:text-[#ffffff] dark:bg-black text-[#939BC3]'>Zaloguj się</button>
       </div>
     </div>
   )

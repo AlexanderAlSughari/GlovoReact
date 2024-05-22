@@ -9,7 +9,7 @@ const Header = () => {
           <p className='text-white text-[1vw] phone:hidden px-2'>Najlepsze jedzenie z najpopularniejszych restauracji, zamawiaj ile chcesz, jedz ile chcesz bez ograniczeń, najczęściej wybierane potrawy przez naszych użytkowników. Oferty od fastfoodów po obiady domowe oraz ekskluzywne. Przebieraj w ofertach związanymi z owocami morza.</p>
         </div>
         <a href='#explore-menu'>
-          <button className='text-[#747474] mx-2 font-medium py-[1vw] px-[2.3vw] bg-white text-[max(1vw,13px)] rounded-[50px] border-none phone:p-[2vw_4vw] dark:bg-black text-[939BC3]'>Zobacz Menu</button>
+          <button className='text-[#747474] mx-2 font-medium py-[1vw] px-[2.3vw] bg-white text-[max(1vw,13px)] rounded-[50px] border-none phone:p-[2vw_4vw] dark:bg-black text-[#939BC3]'>Zobacz Menu</button>
         </a>        
       </div>
     </div>
