@@ -16,13 +16,13 @@ const App = () => {
   return (
     <>
     {showLogin ? <LoginPopup setShowLogin={setShowLogin}/> : <></>}
-    {showPopup ? <Popups setShowPopup={setShowPopup}/> : <></>}
+    {showPopup ? <Popups showPopup={showPopup} setShowPopup={setShowPopup}/> : <></>}
       <div className='w-4/5 m-auto  dark:bg-black'>
         <Navbar setShowLogin={setShowLogin}/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/cart' element={<Cart/>}/>
-          <Route path='/order' element={<PlaceOrder/>}/>
+          <Route setShowPopup={setShowPopup}  path='/order' element={<PlaceOrder/>}/>
         </Routes>
       </div>
     <Footer setShowPopup={setShowPopup} />

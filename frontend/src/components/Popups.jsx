@@ -1,8 +1,10 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 
-const Popups = ({setShowPopup}) => {
+const Popups = ({showPopup, setShowPopup}) => {
   return (
+    showPopup === 'policyPrivacy'
+    ?
     <div className='absolute z-[1] w-full h-full bg-[#00000090] grid'>
       <form className='place-self-center w-[max(23vw,800px)] phone:w-[max(23vw,330px)] text-[#808080] bg-white flex flex-col gap-[25px] p-[25px_30px] rounded-lg text-sm animate-fadeIn duration-500'>
           <div className="flex justify-between items-center text-black">
@@ -50,6 +52,21 @@ const Popups = ({setShowPopup}) => {
           </div>
       </form>
     </div>
+    :
+    (showPopup === 'aboutUs'
+     ? <div className='absolute z-[1] w-full h-full bg-[#00000090] grid'>
+        <form className='place-self-center w-[max(23vw,800px)] phone:w-[max(23vw,330px)] text-[#808080] bg-white flex flex-col gap-[25px] p-[25px_30px] rounded-lg text-sm animate-fadeIn duration-500'>
+            <div className="flex justify-between items-center text-black">
+                <h2 className='font-medium text-2xl'>O nas</h2>
+                <img className='cursor-pointer' onClick={() => setShowPopup(false)} src={assets.cross_icon} alt="cross_icon" />
+            </div>
+            <div>
+              GlovoApp to rewolucyjna platforma, która przynosi wyjątkową wygodę zamawiania jedzenia prosto pod drzwi. Z szerokim wyborem menu, dostarczamy świeże, smakowite dania do Twojego domu w tempie błyskawicznym. Nasza intuicyjna strona pozwala łatwo przeglądać i zamawiać swoje zamówienia, zapewniając niezrównane doświadczenie użytkownika. Dołącz do milionów zadowolonych klientów i odkryj, dlaczego GlovoApp to najlepsze rozwiązanie dla Twojego głodu! Nie czekaj dłużej - zamów już teraz i delektuj się ulubionymi smakami bez wychodzenia z domu!
+            </div>
+        </form>
+      </div>
+      : <></>
+    )
   )
 }
 

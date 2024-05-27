@@ -24,10 +24,10 @@ const Footer = ({setShowPopup}) => {
                 <div className="flex flex-col items-start gap-5">
                     <h2 className='text-white font-medium text-2xl'>STRONA</h2>
                     <ul>
-                        <li className='list-none mb-[10px] cursor-pointer'>Strona główna</li>
-                        <li className='list-none mb-[10px] cursor-pointer'>O nas</li>
-                        <li className='list-none mb-[10px] cursor-pointer'>Dostawy</li>
-                        <li className='list-none mb-[10px] cursor-pointer'><button onClick={() => setShowPopup(true)}  >Polityka prywatności</button></li>
+                        <li className='list-none mb-[10px] cursor-pointer'><a href="#navbar">Strona główna</a></li>
+                        <li className='list-none mb-[10px] cursor-pointer'><a href='#navbar' onClick={() => setShowPopup('aboutUs')}>O nas</a></li>
+                        <li className='list-none mb-[10px] cursor-pointer'><a href='#explore-menu'>Dostawy</a></li>
+                        <li className='list-none mb-[10px] cursor-pointer'><a href='#navbar' onClick={() => setShowPopup('policyPrivacy')}>Polityka prywatności</a></li>
                     </ul>
                 </div>
                 <div className="flex flex-col items-start gap-5">

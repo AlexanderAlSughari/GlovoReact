@@ -5,7 +5,7 @@ import { assets } from '../assets/assets';
 
 const Cart = () => {
 
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
+  const { cartItems, food_list, addToCart, removeFromCart, deleteCartElement, getTotalCartAmount } = useContext(StoreContext);
 
   const navigate = useNavigate();
 
@@ -56,9 +56,13 @@ const Cart = () => {
                     <img className='w-[50px] select-none' src={item.image} alt="item_image" />
                     <p>{item.name}</p>
                     <p>{item.price}zł</p>
-                    <p className='border w-4 px-6 py-1 flex justify-center font-light'>{cartItems[item._id]}</p>
+                    <div className='border flex justify-around w-14 font-light py-1'>
+                      <p onClick={() => addToCart(item._id)} >+</p>
+                      <p>{cartItems[item._id]}</p>
+                      <p onClick={() => removeFromCart(item._id)} >-</p>
+                    </div>
                     <p>{item.price * cartItems[item._id]}zł</p>
-                    <img onClick={() => removeFromCart(item._id)} className='cursor-pointer w-5 select-none' src={assets.remove_icon} alt="remove_icon" />
+                    <img onClick={() => deleteCartElement(item._id)} className='cursor-pointer w-5 select-none' src={assets.remove_icon} alt="remove_icon" />
                   </div>
                   <hr className='h-[1px] bg-[#B8B8B8] border-none' />
                 </div>
